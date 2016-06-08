@@ -1,0 +1,18 @@
+
+<f:layout name="Default" />
+
+
+<f:section name="main">
+<h1>New Example</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" arguments="{object:'newExample'}"/>
+<input type="hidden" id="baseurl" value="{baseurl}">
+<f:form action="create" controller="Uploader" enctype="multipart/form-data"  name="newExample">
+
+  <input type="file" name="tx_pitsmultifileuploader_multifileuploader[newExample][image]" id="input-id">
+  <div style="height:30px; width:100%"></div>
+	<f:form.submit value="Create new" />
+</f:form>
+</f:section>

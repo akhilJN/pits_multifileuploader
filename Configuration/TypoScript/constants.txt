@@ -1,0 +1,15 @@
+
+plugin.tx_pitsmultifileuploader_multifileuploader {
+	view {
+		# cat=plugin.tx_pitsmultifileuploader_multifileuploader/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:pits_multifileuploader/Resources/Private/Templates/
+		# cat=plugin.tx_pitsmultifileuploader_multifileuploader/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:pits_multifileuploader/Resources/Private/Partials/
+		# cat=plugin.tx_pitsmultifileuploader_multifileuploader/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:pits_multifileuploader/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_pitsmultifileuploader_multifileuploader//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

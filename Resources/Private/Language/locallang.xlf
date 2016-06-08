@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-12T04:35:58Z" product-name="pits_multifileuploader">
+		<header/>
+		<body>
+			<trans-unit id="tx_pitsmultifileuploader_domain_model_uploader">
+				<source>Uploader</source>
+			</trans-unit>
+			<trans-unit id="tx_pitsmultifileuploader_domain_model_uploader.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_pitsmultifileuploader_domain_model_uploader.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_pitsmultifileuploader_domain_model_uploader.image_collection">
+				<source>Image Collection</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,75 @@
+
+plugin.tx_pitsmultifileuploader_multifileuploader {
+	view {
+		templateRootPaths.0 = {$plugin.tx_pitsmultifileuploader_multifileuploader.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_pitsmultifileuploader_multifileuploader.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_pitsmultifileuploader_multifileuploader.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_pitsmultifileuploader_multifileuploader.persistence.storagePid}
+	}
+}
+
+page.includeCSS {
+	file2 = EXT:pits_multifileuploader/Resources/Public/css/fine-uploader-gallery.css
+}
+
+page.includeJSFooter{
+	file001 = EXT:pits_multifileuploader/Resources/Public/js/fine-uploader.js
+	file002 = EXT:pits_multifileuploader/Resources/Public/js/pmfuMain.js
+}
+
+config.tx_extbase {
+	persistence {
+		# Enable this if you need the reference index to be updated
+		# updateReferenceIndex = 1
+		classes {
+      PMFU\PitsMultifileuploader\Domain\Model\FileReference {
+				mapping {
+					tableName = sys_file_reference
+					columns {
+						uid_local.mapOnProperty = originalFileIdentifier
+					}
+				}
+			}
+		}
+	}
+	objects {
+		TYPO3\CMS\Extbase\Domain\Model\FileReference.className = PMFU\PitsMultifileuploader\Domain\Model\FileReference
+	}
+}
+
+
+plugin.tx_pitsmultifileuploader._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-pits-multifileuploader table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-pits-multifileuploader table th {
+		font-weight:bold;
+	}
+
+	.tx-pits-multifileuploader table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

@@ -1,0 +1,39 @@
+<f:comment>
+    <!-- <f:layout name="Default" />
+    <f:section name="main">
+        <h1>Single View for Reference</h1>
+        <f:flashMessages renderMode="div" />
+        <f:render partial="Uploader/Properties" />
+        <f:form action="upload" controller="Uploader" enctype="multipart/form-data" method="POST" name="field">
+            <h3>Registration</h3>
+            <fieldset class="ieldset fieldset_1 ">
+                <legend class="legend">Form</legend>
+                <div class="form-group">
+                    <label for="field_uploadset" class="control-label col-sm-2" title="">
+                        Uploadd
+                    </label>
+                    <div class="col-sm-10">
+                        <input accept=".jpg,.jpeg,.gif,.png,.tif,.txt,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.flv,.mpg,.mpeg,.avi,.mp3,.zip,.rar,.ace,.csv" class="powermail_file " id="field_uploadset" type="file" name="image">
+                    </div>
+                    <div class="col-sm-10" style="margin-top:20px;">
+                        <input type="submit" id="form-submit" value="Upload">
+                    </div>
+                </div>
+            </fieldset>
+        </f:form>
+    </f:section> -->
+</f:comment>
+
+
+<f:layout name="Default" /> This Template is responsible for displaying a single view for a domain object If you modify this template, do not forget to change the overwrite settings in /Configuration/ExtensionBuilder/settings.yaml: Resources: Private: Templates: Show.html: keep
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <h1>Single View for Example</h1>
+
+    <f:flashMessages />
+    <f:render partial="Uploader/Properties" arguments="{example:example}" />
+    <f:link.action action="list">Back to list</f:link.action>
+    <br />
+    <f:link.action action="new">New Example</f:link.action>
+</f:section>
